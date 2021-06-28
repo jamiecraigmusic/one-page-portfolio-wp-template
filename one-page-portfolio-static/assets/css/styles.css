@@ -226,13 +226,102 @@ h5{
 
 .services-section {
   text-align: center;
-  padding: 8rem 10%;
+  padding: 8rem 8%;
   background-color: #E5E3CF;
 }
 
 .service-box {
   text-align: center;
-  padding:1.5rem;
+  padding:0.5rem;
+  position: relative;
+  color: white;
+  
+}
+
+.service-img-main {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  background: rgba(42,55,76,1);
+}
+
+/* .middle {
+  transition: .5s ease;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.service-box:hover .service-img-main {
+  opacity: 0.3;
+  
+}
+
+.service-box:hover .middle {
+  opacity: 1;
+} */
+
+.service-box img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.service-box h3 {
+  opacity: 0.8;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+
+.service-box figure {
+	background: #2A374C;
+}
+
+.service-box:hover img {
+	opacity: .4;
+  
+}
+
+.service-box:hover h3 {
+	opacity: 1;
+  
+}
+
+
+.centered {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:0.8;
+}
+
+
+.overlay-service {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  transition: .5s ease;
+  background-color: #000 0.5;
+}
+
+.hover-item:hover .overlay-service {
+  position: relative;
+  opacity: 1;
+  /* background-color: (42,55,76,0.8); */
+  
 }
 
 .service-img{
@@ -244,6 +333,118 @@ h5{
 #services .btn {
   margin-top:3rem;
 }
+
+.service-sub-title{
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.service-text{
+  padding:3rem 8%;
+  text-align: justify;
+}
+
+.clostBtn-service{
+  text-decoration: none;
+  font-size:42px;
+  color:#2A374C;
+  position:absolute;
+  top: 0;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.clostBtn-service:hover{
+  color:#6a7382;
+}
+
+/* WHO-AND-WHY */
+#who-and-why{
+  display:none;
+  padding-left: 14%;
+  padding-right: 14%;
+  background-color: #fff;
+  position:relative;
+}
+
+.who-why-text {
+  text-align: center;
+}
+
+.why-items{
+  text-align: left;
+  font-size: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;;
+}
+
+/* HOW I HELP */
+
+#how-i-help{
+  display: none;
+  padding-left: 13%;
+  padding-right: 13%;
+  background-color: #fff;
+  position:relative;
+}
+
+
+
+ .how-line:not([size]){
+   width: 100%;
+   height: 2px;
+ }
+
+ #how-i-help .service-text{
+  padding-bottom: 0rem;
+}
+
+#how-i-help .service-description {
+  padding-bottom: 1rem;
+}
+
+ #how-i-help .row {
+  --bs-gutter-x: 4rem;
+ }
+
+ .therapy-row-1{
+   padding-bottom: 2rem;;
+ }
+
+ .therapy-row-2{
+   padding-bottom:3rem;
+ }
+
+ .therapy-type{
+  text-align: left;
+}
+
+.therapy-description{
+  text-align: justify;
+}
+
+.numbers{
+  color:#FFA978;
+  font-size: 2rem;
+  font-weight: 100;
+
+}
+
+/* WHAT TO EXPECT */
+#what-to-expect{
+ display: none;
+ padding-left: 13%;
+ padding-right: 13%;
+ background-color: #fff;
+ position:relative;
+}
+
+#what-to-expect .clostBtn-service{
+  font-size:40px;
+  top:15px;
+  right:35px;
+}
+
 
 
 /* ========== testimonial Section ========== */
@@ -280,48 +481,6 @@ h5{
 }
 
 
-/* NEW CSS FOR SERVICE SECTION */
-
-.tabs-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  transform: translateY(25%);
-  
-  
-}
-
-.tabs-container .tabs{
-  
-  margin-left: 1rem;
-  margin-right: 1rem;
- }
- 
- .service-container{
-   text-align: left;
-   background-color: #fff;
-   height:50rem;;
-   width:100%;
-   padding:1rem;
- }
-
- .service-row{
-   padding-top:3rem;
- }
- 
- .atitle{
-   color:black;
- }
- 
-.service-img-new{
-  position: relative;
-  object-position: 10% 10%;  
-  padding-top:3rem;
-  width: 100%;
-  height: auto;
-}
 
 
 /* ========== contact Section ========== */
