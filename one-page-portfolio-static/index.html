@@ -42,19 +42,21 @@
       <div class="overlay-content">
         <ul class="nav-items">
           <li><a onClick="closeNav()" href="#about">About</a></li>
-          <li><a onClick="closeNav()" href="#services">Services</a></li>
+          <li><a onClick="closeNav()" href="#services">My Practice</a></li>
           <li><a onClick="closeNav()" href="#testimonials">Testimonials</a></li>
           <li><a onClick="closeNav()" href="#contact">Contact</a></li>
         </ul>
-
       </div>
 
     </div>
 
 
     <!-- Use any element to open/show the overlay navigation menu -->
-    <span class="sr-only">Expand Navigation</span>
-    <span class="hamburger" onclick="openNav()"><i class="fas fa-bars"></i></span>
+    <div class="container-fluid nav-container"></div>
+      <span class="sr-only">Expand Navigation</span>
+      <span class="hamburger" onclick="openNav()"><i class="fas fa-bars"></i></span>
+    </div>
+    
 
     <div class="container-fluid">
       <div class="header-message">
@@ -75,26 +77,36 @@
       <h2>ABOUT ME</h2>
       <h5>Let me introduce myself</h5>
       <hr>
-      <p class="bio-text">Are you struggling to enjoy life, yet are not sure what it is that is missing? Or maybe you know what is missing but just can not seem to get there? Creating a safe place where you can get honest with yourself is my first
-        goal. Self-awareness is the first step in resolving ANY problem. Discovering your authentic self is next, and provides you the direction on where you want to go. Life can be hard sometimes, but with the right support and commitment, things DO
-        get better! My goal as a therapist is to help you become your own therapist. I am in network with Aetna, Cigna, United Health Care/Optum.<br />
+      
+        
 
-        </br />
-        I work with all adults, and late teens on issues such as trauma, depression, anxiety, and lack of direction/meaning in life. I specialize in trauma, anxiety, depression, addiction issues, individuals impacted by the addiction of others,
-        co-dependency and post treatment/early recovery problems.<br /><br />
-        I work to incorporate various mindfullness techniques, skills you can use forever, to manage anxiety and depression. My goal is to not be your therapist forever, but to move you in the direction where you are able to have healthy coping
-        skills to deal with life on life's terms.</p>
+      <p class="bio-text">Before we talk about me, let’s talk about you, and acknowledge what you are doing at this very second. 
+      Here you are being responsible for yourself and seeking out support with whatever you are struggling with. That takes strength.  
+      I hope you find relief from what ails you, whether it is with me, or somewhere else. You deserve it (even if you don’t feel like 
+      you do)!</p>
+      <p class="bio-text">So, about me. I think there is too much suffering in the world.</p>
+      <p class="bio-text">Throughout my life…</p>
+        
+        
+
     </div>
 
     <!-- Learn More Section -->
-    <div id="qualifications" class="container-fluid hidden-bio">
-      <h3>Qualifications</h3>
-      <p><b>Years in Practice: </b>15 years</p>
-      <p><b>License: </b>Florida / SW10710</p>
-      <p><b>School: </b>Florida Atlantic University</p>
-      <p><b>Year Graduated: </b>2006</p>
+    <div id="extended-bio" class="container-fluid hidden-bio">
+      
+      <p class="bio-text"> I have worked in many different fields, but none of them truly resonated with my soul. 
+        For a while I was uncertain of my purpose, but the answer was right in front of my face, as friends and family always came to me 
+        to talk about their problems. I loved exploring solutions with the and “You are so understanding and easy to talk too” was 
+        something I often heard. I also always had an intense interest in psychology, trying to understand why people do what they do 
+        and how they can change their behaviors to healthier ones. So I went back to school and received my bachelor’s degree 
+        in Social Psychology and started working in an addiction treatment center in 2001. This work just felt right for me, and 
+        I earned a Master of Social Work degree to be of better service to people in need.  In 2013, I became a 
+        Licensed Clinical Social Worker by the state of Florida and currently have a private practice in Delray Beach, FL. 
+        I still do some work with a dual diagnosis treatment center running group therapy, and I also teach a few classes at 
+        Florida Atlantic University. The field of psychology is constantly evolving and I remain fascinated with learning new techniques 
+        that can help clients heal. Read below for more information on my practice. </p>
     </div>
-    <button type="button" id="learn-more" class="btn btn-primary">Learn More</button>
+    <button type="button" id="learn-more" class="btn btn-primary">Read More</button>
   </section>
 
   <!-- Services Section -->
@@ -110,7 +122,7 @@
         <!-- service 1 -->
         <div class="service-box col-md-4">
 
-          <figure><img src="./assets/img/office_1_600by400.png" alt="" class="service-img-main img-fluid"></figure>
+          <figure><img src="./assets/img/office_1_600by400.png" alt="" class="service-img-main img-fluid who-why-img"></figure>
           <div class="middle">
             <div class="centered"><h3>Who and Why</h3>
           </div>
@@ -121,7 +133,7 @@
         <!-- service 2 -->
         <div class="service-box col-md-4">
 
-          <figure><img src="./assets/img/beach_600by400.png" alt="" class="service-img-main img-fluid"></figure>
+          <figure><img src="./assets/img/beach_600by400.png" alt="" class="service-img-main how-img img-fluid"></figure>
           <div class="middle">
             <div class="centered"><h3>How I Help</h3>
             </div>
@@ -133,7 +145,7 @@
         <!-- service 3 -->
         <div class="service-box col-md-4 ">
         
-            <figure><img src="./assets/img/office_2_600by400.png" alt="" class="service-img-main img-fluid"></figure>
+            <figure><img src="./assets/img/office_2_600by400.png" alt="" class="service-img-main what-img img-fluid"></figure>
             <div class="middle">
               <div class="centered"><h3>What to Expect</h3>
             </div>
@@ -148,8 +160,8 @@
 
   <!-- Who and Why DropDown -->
 
-  <div class="container-fluid" id="who-and-why">
-    <a href="javascript:void(0)" class="clostBtn-service" >&times;</a>
+  <div class="container-fluid who-why-dropdown" id="who-and-why">
+    <a href="javascript:void(0)" class="clostBtn-service close-who-why" onclick="closeWhoWhy()" >&times;</a>
     <h3 class="service-sub-title">Who and Why</h3>
     <img src="./assets/img/1.png" alt="Marcel Fort's office" class="service-img-dropdown img-fluid">
     <div class="service-text">
@@ -183,15 +195,15 @@
       </div>
     </div>
 
-    <p class="service-description">Many other reasons…and if it is not an issue I am skilled in, I will help you find someone who is. </p>
+    <p class="who-why-text">Many other reasons…and if it is not an issue I am skilled in, I will help you find someone who is. </p>
   </div>
   </div>
 
   <!-- How I Help -->
-  <div class="container-fluid" id="how-i-help">
-    <a href="javascript:void(0)" class="clostBtn-service" >&times;</a>
+  <div class="container-fluid how-dropdown" id="how-i-help">
+    <a href="javascript:void(0)" class="clostBtn-service" onclick="closeHow()" >&times;</a>
     <h3 class="service-sub-title">How I Help</h3>
-    <img src="./assets/img/3.png" alt="Calm Sunset" class="service-img-dropdown img-fluid">
+    <img src="./assets/img/3.png" alt="Calm Sunset" class="service-img-dropdown  img-fluid">
     <div class="service-text">
       <p class="service-description">Many studies have shown that one of the best benefits of therapy is talking.  So, we start with that. Allowing a person to be in a judgement free zone to just unload whatever is bothering them can remove so much emotional weight and often brings some relief. I also tend to incorporate a lot of education in my sessions, as I am a teacher by nature, and believe knowledge is invaluable to solving problems. But I have been trained in many other therapeutic techniques.  Here are just some:</p>
       <hr class="how-line">
@@ -224,8 +236,8 @@
   </div>
 
     <!-- What to Expect -->
-    <div class="container-fluid" id="what-to-expect">
-      <a href="javascript:void(0)" class="clostBtn-service" >&times;</a>
+    <div class="container-fluid what-dropdown" id="what-to-expect">
+      <a href="javascript:void(0)" class="clostBtn-service" onclick="closeWhat()">&times;</a>
       <h3 class="service-sub-title">What to Expect</h3>
       <img src="./assets/img/2.png" alt="Marcel Fort's office" class="service-img-dropdown img-fluid">
       <div class="service-text">

@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 hr{
@@ -135,13 +136,17 @@ h5{
   font-size: 60px;
 }
 
-.hamburger{
+.nav-container{
   position: relative;
+}
+
+.hamburger{
+  position: absolute;
 /* Adjust these values accordingly */
   top: 25px;
-  left:94%;
+  left:90%;
   font-size: 2rem;
-  color:white;
+  color:#fff;
 
 }
 
@@ -213,11 +218,12 @@ h5{
 }
 
 .bio-text{
+  text-align: justify;
   font-size:1.25rem;
   font-weight: 100;
 }
 
-#qualifications{
+#extended-bio{
   display: none;
   padding-top: 1.25rem;
 }
@@ -248,26 +254,6 @@ h5{
   background: rgba(42,55,76,1);
 }
 
-/* .middle {
-  transition: .5s ease;
-  opacity: 0.8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.service-box:hover .service-img-main {
-  opacity: 0.3;
-  
-}
-
-.service-box:hover .middle {
-  opacity: 1;
-} */
-
 .service-box img {
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
@@ -294,10 +280,9 @@ h5{
   
 }
 
-
 .centered {
   position: absolute;
-  top: 85%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity:0.8;
@@ -360,11 +345,14 @@ h5{
 
 /* WHO-AND-WHY */
 #who-and-why{
-  display:none;
   padding-left: 14%;
   padding-right: 14%;
   background-color: #fff;
   position:relative;
+}
+
+.who-why-dropdown{
+  display:none;
 }
 
 .who-why-text {
@@ -381,14 +369,15 @@ h5{
 /* HOW I HELP */
 
 #how-i-help{
-  display: none;
+  display: none; 
+}
+
+.how-dropdown{
   padding-left: 13%;
   padding-right: 13%;
   background-color: #fff;
   position:relative;
 }
-
-
 
  .how-line:not([size]){
    width: 100%;
@@ -433,10 +422,14 @@ h5{
 /* WHAT TO EXPECT */
 #what-to-expect{
  display: none;
- padding-left: 13%;
- padding-right: 13%;
- background-color: #fff;
- position:relative;
+
+}
+
+.what-dropdown{
+  padding-left: 13%;
+  padding-right: 13%;
+  background-color: #fff;
+  position:relative;
 }
 
 #what-to-expect .clostBtn-service{
@@ -444,6 +437,13 @@ h5{
   top:15px;
   right:35px;
 }
+
+
+
+
+
+
+
 
 
 
@@ -550,4 +550,52 @@ footer {
     top:15px;
     right:35px;
   }
+
 }
+
+/* Additional Media Queries  */
+
+
+@media screen and (max-width: 767px){
+  .header-message{
+    padding-top:16rem;
+    padding-left: 4rem;
+    padding-bottom: 5rem;
+  }
+	.services-section {
+    padding: 8rem 4%;
+  }
+  .service-text{
+    padding-left: 0;
+    padding-right:0;
+  }
+
+  
+  #who-and-why{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+  #how-i-help{
+  padding-left: 6%;
+  padding-right: 6%;
+
+}
+
+  #what-to-expect{
+    padding-left: 6%;
+    padding-right: 6%;
+ }
+}
+
+@media screen and (max-width: 400px){
+  .header-message{
+    padding-top:19rem;
+    padding-left: 1rem;
+    
+  }
+}
+
+
+
+

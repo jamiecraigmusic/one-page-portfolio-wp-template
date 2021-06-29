@@ -40,7 +40,7 @@
 
 
   // Learn More Button Toggle
-  const targetDiv = document.getElementById("qualifications");
+  const targetDiv = document.getElementById("extended-bio");
   const btn = document.getElementById("learn-more");
   btn.onclick = function() {
     if (targetDiv.style.display === "block") {
@@ -49,3 +49,60 @@
       targetDiv.style.display = "block";
     }
   };
+
+
+//My practice section
+const myPractice = document.getElementById("services");
+
+ // Dropdown functionality for Who and Why section
+  const who_why_img = document.querySelector(".who-why-img");
+  const who_why_dropdown = document.getElementById("who-and-why");
+
+  // DropDown functionality for How I help section
+  const howImage = document.querySelector(".how-img");
+  const howDropdown = document.getElementById("how-i-help");
+
+  //Dropdown functionality for What to Expect
+  const whatImage = document.querySelector(".what-img");
+  const whatDropDown = document.getElementById("what-to-expect");
+
+  function displayDropdown(targetItem,e){
+    e.preventDefault();
+    who_why_dropdown.style.display="none";
+    howDropdown.style.display="none";
+    whatDropDown.style.display="none";
+    fadeIn(targetItem);
+    const coords = targetItem.getBoundingClientRect();
+    window.scrollTo(coords.left + window.pageXOffset, coords.top + pageYOffset);
+  }
+
+  function closeDropdown(targetItem){
+    fadeOut(targetItem);
+    const myPracticeCoords = myPractice.getBoundingClientRect();
+    window.scrollTo(myPracticeCoords.left + window.pageXOffset, myPracticeCoords.top + pageYOffset);
+  }
+
+  who_why_img.addEventListener("click", function(e){
+    displayDropdown(who_why_dropdown,e);  
+  });
+
+  howImage.addEventListener("click", function(e){
+    displayDropdown(howDropdown,e);
+  });
+
+  whatImage.addEventListener("click", function(e){
+    displayDropdown(whatDropDown,e);
+  });
+
+  function closeWhoWhy(){
+    closeDropdown(who_why_dropdown);
+  }
+
+  function closeHow(){
+    closeDropdown(howDropdown);
+  }
+
+  function closeWhat(){
+    closeDropdown(whatDropDown);
+  }
+  
